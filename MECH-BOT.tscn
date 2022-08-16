@@ -1,8 +1,9 @@
 [gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://blender/shadow.material" type="Material" id=1]
-[ext_resource path="res://blender/MechMat.material" type="Material" id=2]
+[ext_resource path="res://materials/shadow.material" type="Material" id=1]
+[ext_resource path="res://materials/MechMat.material" type="Material" id=2]
 [ext_resource path="res://MECH-BOT.vs" type="Script" id=3]
+
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {

@@ -10,7 +10,6 @@ script = ExtResource( 4 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.898127, 0, 0.439735, 0, 1, 0, -0.439735, 0, 0.898127, 4.62611, 10.9975, 9.99753 )
-current = true
 far = 1000.0
 
 [node name="SkyboxPivot" parent="." instance=ExtResource( 1 )]
@@ -50,3 +49,7 @@ shadow_enabled = true
 transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 29.79, -23.2705, 8.62341 )
 light_color = Color( 0.862745, 0.913725, 0.960784, 1 )
 shadow_enabled = true
+
+[node name="CameraPrueba" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 42.3918, 0 )
+current = true

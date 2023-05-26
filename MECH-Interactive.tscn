@@ -1,12 +1,26 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://SkyboxPivot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LAND-Body.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MECH-BOT.tscn" type="PackedScene" id=3]
 [ext_resource path="res://MECH-Interactive.vs" type="Script" id=4]
+[ext_resource path="res://sky-sphere.png" type="Texture" id=5]
+
+[sub_resource type="PanoramaSky" id=1]
+panorama = ExtResource( 5 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+ambient_light_color = Color( 0.529412, 0.498039, 0.466667, 1 )
+ambient_light_energy = 0.0
+ambient_light_sky_contribution = 0.14
 
 [node name="World" type="Spatial"]
 script = ExtResource( 4 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.898127, 0, 0.439735, 0, 1, 0, -0.439735, 0, 0.898127, 4.62611, 10.9975, 9.99753 )
@@ -20,6 +34,7 @@ far = 1000.0
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.7569, 0 )
 
 [node name="SkyboxPivot" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [node name="lights" type="Spatial" parent="."]
 
@@ -45,7 +60,6 @@ layers = 1024
 light_color = Color( 0.666667, 0.835294, 0.964706, 1 )
 light_specular = 0.0
 light_cull_mask = 4294967293
-shadow_enabled = true
 
 [node name="DirectionalLight3" type="DirectionalLight" parent="lights"]
 transform = Transform( 0.61841, 0.359139, 0.698991, -0.784317, 0.337703, 0.520389, -0.0491595, -0.870044, 0.490518, 40.3776, 24.0007, 12.0108 )
@@ -60,7 +74,6 @@ layers = 1024
 light_color = Color( 0.835294, 0.74902, 0.839216, 1 )
 light_specular = 0.0
 light_cull_mask = 4294967293
-shadow_enabled = true
 
 [node name="DirectionalLight5" type="DirectionalLight" parent="lights"]
 transform = Transform( 1, 0, 0, 0, 0.5, -0.866025, 0, 0.866025, 0.5, 29.79, -23.2705, 8.62341 )
@@ -68,7 +81,6 @@ layers = 1024
 light_color = Color( 0.862745, 0.913725, 0.960784, 1 )
 light_specular = 0.0
 light_cull_mask = 4294967293
-shadow_enabled = true
 
 [node name="CameraPrueba" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, 1, 0, -1, -1.62921e-07, 0, 42.3918, 0 )

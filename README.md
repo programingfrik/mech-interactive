@@ -23,6 +23,6 @@ ESC	-	Stop the game and return to editing
 -Reevan McKay <reevan@blender.nl>
 ```
 
-As you can see the original author is Reeve McKay.
+As you can see the original author is Reevan McKay.
 
 Peace and love :-P

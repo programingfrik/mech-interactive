@@ -25,4 +25,6 @@ ESC	-	Stop the game and return to editing
 
 As you can see the original author is Reevan McKay.
 
+This demo was made on Godot 3.2.3.
+
 Peace and love :-P
